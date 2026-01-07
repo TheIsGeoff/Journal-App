@@ -1,1 +1,1 @@
-JOURNAL-APP
+# Journal App
