@@ -10,6 +10,60 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
+
+        <div class="main-wrapper">
+            <header class="timeline-head">
+                <form action="submit" class="journal-input">
+                    <header class="journal-input_head">
+
+                        <div class="journal-input_head-component">
+
+                            <div class="active-dot"></div>
+                            <p class="journal-input-title">New Entry</p>
+
+                        </div>
+
+                        <div class="journal-input_head-component">
+
+                            <input type="date" id="date" name="trip-start" class="date-input"/>
+
+                        </div>
+
+                    </header>
+                    <textarea name="journal-text" id="journal-text" cols="30" rows="10" placeholder="How was your day?"></textarea>
+                    <div class="form-bottom-wrapper">        
+                        <div id="wordcount-display" class="wordcount-limit-display">0 / 1000</div>     
+                              
+                        <button type="submit" class="journal-submit">
+
+                            <p>Add</p>
+
+                            <svg viewBox="0 0 24 24" fill="none" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                            <path 
+                              d="M11.75 19V7m-6.5 5.25L11.75 6l6.5 6.25" 
+                              stroke="currentColor" 
+                              stroke-width="1.5" 
+                              stroke-miterlimit="10" 
+                              vector-effect="non-scaling-stroke"
+                              transform="rotate(90 12 12)"
+                            />
+                          </svg>
+
+                        </button>
+                    </div>
+
+                </form>
+            </header>
+            <main class="timeline-wrapper">
+                <div class="timeline-line-display">
+                    <div class="timeline-line"></div>
+                </div>
+                <div class="timeline-entrys"></div>
+            </main>
+            <footer class="timeline-footer">
+                <p class="timeline-footer_text">You have reached the end of your journal. Keep adding new entrys to increase its length!</p>
+            </footer>
+        </div>
         
         <script src="static/main.js" async defer></script>
     </body>
