@@ -30,9 +30,21 @@
                         </div>
 
                     </header>
-                    <textarea name="journal-text" id="journal-text" cols="30" rows="10" placeholder="How was your day?"></textarea>
-                    <div class="form-bottom-wrapper">        
-                        <div id="wordcount-display" class="wordcount-limit-display">0 / 1000</div>     
+                    <textarea maxlength="1000" name="journal-text" id="journal-text" cols="30" rows="10" placeholder="How is your day?"></textarea>
+                    <div class="form-bottom-wrapper">
+                        <div class="left-display"> 
+                            <div class="ring" id="wordcount-display" style="--percent: 72;"></div>
+
+                            <div class="devider"></div>
+                        
+                            <div class="emotion-rating-wrapper">
+                                <button class="emotion-rating-button">😢</button>
+                                <button class="emotion-rating-button emotion-rating-button--active">😐</button>
+                                <button class="emotion-rating-button">🙂</button>
+                                <button class="emotion-rating-button">😀</button>
+                            </div>
+                        </div>       
+
                               
                         <button type="submit" class="journal-submit">
 
@@ -63,7 +75,9 @@
                         <div class="entry-bar"></div>
                         <div class="entry-contence">
                             <div class="entry-date">
-                                <div class="active-dot"></div>
+                                <div class="emotion-icon">
+                                    🙂
+                                </div>
                                 <p>13 Aug 2009</p></div>
                             <div class="entry-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio placeat eligendi doloremque, eveniet voluptate fuga perferendis reiciendis a autem quasi expedita quam ratione atque doloribus tenetur. Optio dicta provident expedita!</div>
                         </div>
@@ -76,5 +90,6 @@
         </div>
         
         <script src="static/main.js" async defer></script>
+        <script src="static/limitDisplay.js" async defer></script>
     </body>
 </html>

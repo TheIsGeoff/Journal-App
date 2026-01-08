@@ -14,6 +14,18 @@ button, .date-input {
     cursor: pointer;
     border: none;
     border-radius: 8px;
+    transition: transform 0.1s ease-out;
+}
+
+button:active, .date-input:active {
+    transform: scale(0.95);
+}
+
+.devider {
+    width: 2px;
+    height: 16px;
+    background-color: #3d444d;
+    margin: 0px 8px;
 }
 
 .active-dot {
@@ -242,3 +254,74 @@ button, .date-input {
     color: #888888;
     font-size: 14px;
 }
+
+.emotion-rating-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+}
+
+.emotion-rating-button {
+    height: 30px;
+    width: 30px;
+    background-color: black;
+    color: white;
+    font-size: 22px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease-out;
+}
+
+.emotion-rating-button:hover {
+    background-color: #292929;
+}
+
+.emotion-rating-button--active {
+    background-color: #292929;
+}
+
+.left-display {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ring {
+    --size: 26px;
+    --thickness: 4px;
+    --color: #e34c26;
+    --bg: #292929;
+  
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    margin-right: 6px;
+  
+    background:
+      conic-gradient(
+        var(--color) calc(var(--percent) * 1%),
+        var(--bg) 0
+      );
+  
+    display: grid;
+    place-items: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #111;
+  }
+  
+  /* inner cutout */
+  .ring::before {
+    content: "";
+    width: calc(100% - var(--thickness) * 2);
+    height: calc(100% - var(--thickness) * 2);
+    background: black;
+    border-radius: 50%;
+  }
+  
+  .emotion-icon {
+    margin-right: 10px;
+  }
